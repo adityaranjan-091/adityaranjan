@@ -1,8 +1,8 @@
+import { NextResponse, NextRequest } from "next/server";
 import { connectDB, ContactForm } from "@/lib/database";
-import { NextResponse } from "next/server";
 
 export async function DELETE(
-  req: Request,
+  request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
@@ -15,9 +15,9 @@ export async function DELETE(
       { message: "Deleted successfully" },
       { status: 200 }
     );
-  } catch (err) {
+  } catch (error) {
     return NextResponse.json(
-      { message: "Server error", error: err },
+      { message: "Server error", error: String(error) },
       { status: 500 }
     );
   }
