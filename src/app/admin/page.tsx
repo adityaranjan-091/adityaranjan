@@ -1,13 +1,18 @@
+// src/app/admin/page.tsx
 import { getServerSession } from "next-auth";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "@/lib/authOptions"; // import from the new file
 import AdminPageClient from "./AdminPageClient";
 import { connectDB, ContactForm } from "@/lib/database";
 
 export default async function AdminPage() {
   const session = await getServerSession(authOptions);
-  if (!session) return <p>You are not authorized</p>;
+
+  if (!session) {
+    return <p>You are not authorized</p>;
+  }
 
   await connectDB();
+
   const submissions = await ContactForm.find().sort({ createdAt: -1 });
 
   const data = submissions.map((entry) => ({
