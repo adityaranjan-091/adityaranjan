@@ -52,7 +52,7 @@ export const SKILLS_DATA: Skill[] = [
   { name: "React", icon: FaReact, category: "Frameworks & Libraries" },
   { name: "Next.js", icon: SiNextdotjs, category: "Frameworks & Libraries" },
   { name: "Node.js", icon: SiNodedotjs, category: "Frameworks & Libraries" },
-  { name: "Express JS", icon: SiExpress, category: "Frameworks & Libraries" },
+  { name: "Express.js", icon: SiExpress, category: "Frameworks & Libraries" },
   {
     name: "Tailwind CSS",
     icon: SiTailwindcss,

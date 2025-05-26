@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google"; // Using Inter as a clean, modern font
-import "./globals.css";
+import { Inter } from "next/font/google";
+import "../globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
-import { ThemeProvider } from "@/components/ThemeProvider"; // Added import
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "A Ranjan",
   description: "A personal portfolio website showcasing projects and skills.",
+  icons:"/logo.png"
 };
 
 export default function RootLayout({

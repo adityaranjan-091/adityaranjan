@@ -55,7 +55,7 @@ const AboutMeSection = () => {
                   asChild
                   className="shadow-md hover:shadow-lg transition-shadow"
                 >
-                  <a href="/resume.pdf" download="YourName_Resume.pdf">
+                  <a href="/resume.pdf" download="Aditya_Ranjan_Resume.pdf">
                     <LuDownload className="mr-2 h-5 w-5" />
                     Download Resume
                   </a>

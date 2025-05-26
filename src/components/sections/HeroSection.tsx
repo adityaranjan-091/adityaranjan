@@ -1,6 +1,23 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { LuArrowDown, LuBriefcaseBusiness, LuSend } from "react-icons/lu";
+
+// handleNavLinkClick function to scroll to the target section smoothly
+const handleNavLinkClick = (
+  event: React.MouseEvent<HTMLAnchorElement>,
+  targetId: string
+) => {
+  event.preventDefault();
+  const id = targetId.startsWith("#") ? targetId.substring(1) : targetId;
+  const element = document.getElementById(id);
+  if (element) {
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
+};
 
 const HeroSection = () => {
   return (
@@ -24,7 +41,10 @@ const HeroSection = () => {
             asChild
             className="shadow-lg hover:shadow-xl transition-shadow"
           >
-            <Link href="#projects">
+            <Link
+              href="#projects"
+              onClick={(e) => handleNavLinkClick(e, "#projects")}
+            >
               <LuBriefcaseBusiness className="mr-2 h-5 w-5" />
               View Projects
             </Link>
@@ -35,7 +55,10 @@ const HeroSection = () => {
             asChild
             className="shadow-lg hover:shadow-xl transition-shadow"
           >
-            <Link href="#contact">
+            <Link
+              href="#contact"
+              onClick={(e) => handleNavLinkClick(e, "#contact")}
+            >
               <LuSend className="mr-2 h-5 w-5" />
               Contact Me
             </Link>
