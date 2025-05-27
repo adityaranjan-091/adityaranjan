@@ -1,6 +1,6 @@
 // src/app/admin/page.tsx
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/authOptions"; // import from the new file
+import { authOptions } from "@/lib/authOptions";
 import AdminPageClient from "./AdminPageClient";
 import { connectDB, ContactForm } from "@/lib/database";
 

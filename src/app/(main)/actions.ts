@@ -1,7 +1,7 @@
 "use server";
 
-import { contactFormSchema, type ContactFormValues } from '@/lib/schema';
-import { connectDB, ContactForm } from '@/lib/database';
+import { contactFormSchema, type ContactFormValues } from "@/lib/schema";
+import { connectDB, ContactForm } from "@/lib/database";
 
 interface FormSubmissionResult {
   success: boolean;
@@ -27,21 +27,16 @@ export async function submitContactForm(
   }
 
   try {
- await connectDB(); // Connect to the database
- const newSubmission = new ContactForm(validationResult.data);
- await newSubmission.save(); // Save the data to the database
+    await connectDB(); // Connect to the database
+    const newSubmission = new ContactForm(validationResult.data);
+    await newSubmission.save(); // Save the data to the database
   } catch (error) {
- console.error("Error saving form submission to database:", error);
+    console.error("Error saving form submission to database:", error);
     return { success: false, message: "Failed to save form submission." };
   }
 
   // Simulate a delay
-  await new Promise(resolve => setTimeout(resolve, 1000));
-
-  // Simulate a possible server error
-  // if (Math.random() > 0.8) {
-  //   return { success: false, message: "An unexpected error occurred. Please try again." };
-  // }
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
   return {
     success: true,

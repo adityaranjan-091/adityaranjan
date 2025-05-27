@@ -1,10 +1,12 @@
-import { NextResponse, NextRequest } from "next/server";
+//app/api/contact/[id]/route.ts
 import { connectDB, ContactForm } from "@/lib/database";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
 export async function DELETE(
-  request: NextRequest,
+  req: NextRequest,
   { params }: { params: { id: string } }
-) {
+): Promise<NextResponse> {
   try {
     await connectDB();
     const deleted = await ContactForm.findByIdAndDelete(params.id);
@@ -15,9 +17,9 @@ export async function DELETE(
       { message: "Deleted successfully" },
       { status: 200 }
     );
-  } catch (error) {
+  } catch (err: any) {
     return NextResponse.json(
-      { message: "Server error", error: String(error) },
+      { message: "Server error", error: err?.message || "Unknown error" },
       { status: 500 }
     );
   }
