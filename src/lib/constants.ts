@@ -86,7 +86,7 @@ export const PROJECTS_DATA: Project[] = [
     imageAiHint: "food rescue website",
     githubUrl: "https://github.com/adityaranjan-091/ByteVerse_Pixel_Phantoms",
     liveDemoUrl: "https://nextjs-boilerplate-pi-nine-85.vercel.app/",
-    tags: ["Next JS", "Next Auth", "MongoDB", "Tailwind"],
+    tags: ["Next JS", "Next Auth", "MongoDB", "Tailwind", "Vercel"],
   },
   {
     id: "project-2",
@@ -99,6 +99,18 @@ export const PROJECTS_DATA: Project[] = [
       "https://github.com/adityaranjan-091/ML-Projects/blob/main/Water_Potability_Prediction.ipynb",
     liveDemoUrl: "#",
     tags: ["Numpy", "Pandas", "Google Colab", "Scikit Learn", "Matplotlib"],
+  },
+  {
+    id: "project-3",
+    title: "Todo List App",
+    description:
+      "A simple and intuitive todo list application that allows users to create, edit, and delete tasks. It features a clean UI and local storage support for task persistence.",
+    imageUrl: "/Todo-App.png",
+    imageAiHint: "Todo list application",
+    githubUrl:
+      "https://github.com/adityaranjan-091/To-do-List-App",
+    liveDemoUrl: "https://adityaranjan-todo-app.vercel.app/",
+    tags: ["HTML", "CSS", "JavaScript", "Vercel"],
   },
 ];
 
