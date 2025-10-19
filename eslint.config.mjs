@@ -1,17 +1,10 @@
-//eslint.config.mjs
-import js from "@eslint/js";
-import next from "@next/eslint-plugin-next";
+import nextPlugin from "eslint-config-next";
 
 export default [
+  nextPlugin.configs.recommended,
   {
-    files: ["**/*.js", "**/*.ts", "**/*.tsx"],
-    plugins: {
-      next,
-    },
     rules: {
-      ...js.configs.recommended.rules,
-      ...next.configs.recommended.rules,
-      ...next.configs["core-web-vitals"].rules,
+      // Add any custom rules here
     },
   },
 ];

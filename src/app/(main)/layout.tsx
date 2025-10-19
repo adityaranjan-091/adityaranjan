@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "../globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import Header from "@/components/layout/Header";
@@ -7,7 +7,11 @@ import Footer from "@/components/layout/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "A Ranjan",
@@ -21,9 +25,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable} suppressHydrationWarning>
-      <body className="antialiased font-sans flex flex-col min-h-screen">
-        <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+    <html lang="en" className={poppins.variable} suppressHydrationWarning>
+      <body className="antialiased font-poppins flex flex-col min-h-screen">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
           <main className="flex-grow">{children}</main>
           <Footer />

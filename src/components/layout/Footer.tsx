@@ -1,23 +1,60 @@
+import Link from "next/link";
 import { LuGithub, LuLinkedin, LuMail } from "react-icons/lu";
-import Link from 'next/link';
+import { SOCIAL_LINKS } from "@/lib/constants";
+
+const socialLinks = [
+  {
+    href: `mailto:${SOCIAL_LINKS.email}`,
+    label: "Email",
+    icon: LuMail,
+    external: false,
+  },
+  {
+    href: SOCIAL_LINKS.github,
+    label: "GitHub",
+    icon: LuGithub,
+    external: true,
+  },
+  {
+    href: SOCIAL_LINKS.linkedin,
+    label: "LinkedIn",
+    icon: LuLinkedin,
+    external: true,
+  },
+];
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="border-t bg-background">
-      <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row sm:px-6 lg:px-8 max-w-7xl">
-        <p className="text-sm text-muted-foreground">
-          &copy; {new Date().getFullYear()} Aditya Ranjan. All rights reserved.
-        </p>
-        <div className="flex items-center space-x-4">
-          <Link href="mailto:ranjanaditya091@gmail.com" aria-label="Email" className="text-muted-foreground hover:text-primary transition-colors">
-            <LuMail className="h-6 w-6" />
-          </Link>
-          <Link href="https://github.com/adityaranjan-091" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="text-muted-foreground hover:text-primary transition-colors">
-            <LuGithub className="h-6 w-6" />
-          </Link>
-          <Link href="https://linkedin.com/in/aditya-ranjan-783739324" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary transition-colors">
-            <LuLinkedin className="h-6 w-6" />
-          </Link>
+      <div className="container mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+          {/* Copyright */}
+          <p className="text-sm text-muted-foreground">
+            &copy; {currentYear} Aditya Ranjan. All rights reserved.
+          </p>
+
+          {/* Social Links */}
+          <div className="flex items-center gap-4">
+            {socialLinks.map((social) => {
+              const Icon = social.icon;
+              return (
+                <Link
+                  key={social.label}
+                  href={social.href}
+                  aria-label={`Visit my ${social.label}`}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  {...(social.external && {
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  })}
+                >
+                  <Icon className="h-6 w-6" aria-hidden="true" />
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </div>
     </footer>

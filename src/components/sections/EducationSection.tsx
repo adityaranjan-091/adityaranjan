@@ -31,7 +31,6 @@ const EducationSection = () => {
                 className="relative pl-[calc(theme(spacing.5)_/_2_+_theme(spacing.5)_/_2_+_theme(spacing.10))]"
               >
                 {" "}
-                {/* pl-[calc(icon_radius + icon_radius + gap)] = pl-[1.25rem + 1.25rem + 1rem] = pl-[3.5rem] = pl-14 */}
                 {/* Timeline Node (Icon in a Circle) */}
                 <div
                   className={cn(
