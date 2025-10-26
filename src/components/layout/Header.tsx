@@ -6,7 +6,14 @@ import { Menu, Code2 } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle, SheetDescription } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+} from "@/components/ui/sheet";
 import { ThemeToggleButton } from "@/components/ThemeToggleButton";
 
 const Header = () => {
@@ -148,9 +155,6 @@ const Header = () => {
               <SheetContent side="right" className="w-[280px] p-6">
                 <SheetHeader className="mb-6">
                   <SheetTitle className="text-2xl font-bold">Menu</SheetTitle>
-                  <SheetDescription>
-                    Navigate through the portfolio sections.
-                  </SheetDescription>
                 </SheetHeader>
                 <nav
                   className="flex flex-col gap-4"

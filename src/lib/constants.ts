@@ -88,7 +88,7 @@ export const PROJECTS_DATA: Project[] = [
     imageUrl: "/SustainBite.jpg",
     imageAiHint: "food rescue website",
     githubUrl: "https://github.com/adityaranjan-091/ByteVerse_Pixel_Phantoms",
-    liveDemoUrl: "https://nextjs-boilerplate-pi-nine-85.vercel.app/",
+    liveDemoUrl: "https://sustainbitein.vercel.app/",
     tags: ["Next JS", "Next Auth", "MongoDB", "Tailwind", "Vercel"],
   },
   {
