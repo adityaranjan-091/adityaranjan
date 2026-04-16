@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState, useEffect, useRef } from "react";
+import { useFormStatus } from "react-dom";
 import { useForm, FormProvider } from "react-hook-form";
 import { Loader2, Send } from "lucide-react";
 import { sendEmail } from "@/lib/contactAction";
@@ -37,6 +38,31 @@ const initialState: FormState = {
   errors: {},
 };
 
+const SubmitButton = () => {
+  const { pending } = useFormStatus();
+
+  return (
+    <Button
+      type="submit"
+      className="w-full"
+      disabled={pending}
+      aria-label={pending ? "Sending message" : "Send message"}
+    >
+      {pending ? (
+        <>
+          <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden="true" />
+          <span>Sending Message...</span>
+        </>
+      ) : (
+        <>
+          <Send className="mr-2 h-4 w-4" aria-hidden="true" />
+          <span>Send Message</span>
+        </>
+      )}
+    </Button>
+  );
+};
+
 const ContactForm = () => {
   const { toast } = useToast();
   const [state, formAction] = useActionState(sendEmail, initialState);
@@ -50,8 +76,7 @@ const ContactForm = () => {
     },
   });
 
-  const { control, formState, reset } = methods;
-  const { isSubmitting } = formState;
+  const { control } = methods;
 
   // Handle form state updates and show toast notifications
   useEffect(() => {
@@ -143,27 +168,7 @@ const ContactForm = () => {
           />
 
           {/* Submit Button */}
-          <Button
-            type="submit"
-            className="w-full"
-            disabled={isSubmitting}
-            aria-label={isSubmitting ? "Sending message" : "Send message"}
-          >
-            {isSubmitting ? (
-              <>
-                <Loader2
-                  className="mr-2 h-4 w-4 animate-spin"
-                  aria-hidden="true"
-                />
-                <span>Sending Message...</span>
-              </>
-            ) : (
-              <>
-                <Send className="mr-2 h-4 w-4" aria-hidden="true" />
-                <span>Send Message</span>
-              </>
-            )}
-          </Button>
+          <SubmitButton />
         </form>
       </Form>
     </FormProvider>
