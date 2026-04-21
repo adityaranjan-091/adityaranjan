@@ -2,7 +2,7 @@ import type { LucideIcon } from "lucide-react";
 import { FaGitAlt, FaReact } from "react-icons/fa";
 
 import {
-  SiCss3,
+  SiCss,
   SiExpress,
   SiGithub,
   SiGooglecolab,
@@ -51,7 +51,7 @@ export const SKILLS_DATA: Skill[] = [
   { name: "JavaScript", icon: SiJavascript, category: "Languages" },
   { name: "TypeScript", icon: SiTypescript, category: "Languages" },
   { name: "HTML5", icon: SiHtml5, category: "Languages" },
-  { name: "CSS3", icon: SiCss3, category: "Languages" },
+  { name: "CSS3", icon: SiCss, category: "Languages" },
   { name: "React", icon: FaReact, category: "Frameworks & Libraries" },
   { name: "Next.js", icon: SiNextdotjs, category: "Frameworks & Libraries" },
   { name: "Node.js", icon: SiNodedotjs, category: "Frameworks & Libraries" },
@@ -113,6 +113,17 @@ export const PROJECTS_DATA: Project[] = [
     githubUrl: "https://github.com/adityaranjan-091/To-do-List-App",
     liveDemoUrl: "https://adityaranjan-todo-app.vercel.app/",
     tags: ["HTML", "CSS", "JavaScript", "Vercel"],
+  },
+  {
+    id: "project-4",
+    title: "ShareCircle",
+    description:
+      "ShareCircle is a community sharing platform to post, discover, and request items locally",
+    imageUrl: "/sharecircle.png",
+    imageAiHint: "community sharing platform",
+    githubUrl: "https://github.com/adityaranjan-091/sharecircle",
+    liveDemoUrl: "https://sharecircle-two.vercel.app/",
+    tags: ["Next JS", "Firebase", "MongoDB", "Tailwind", "Vercel", "TypeScript", "Next Auth"],
   },
 ];
 
