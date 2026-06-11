@@ -201,4 +201,13 @@ export const certifications = [
       "Participated in CODE THE UNCODED 2024 organized by IEEE SB NITP, demonstrating strong problem-solving and coding skills.",
     imageUrl: "/Participation Certificate-IEEE.png",
   },
+  {
+    title: "NPTEL - The Joy of Computing Using Python",
+    organization: "NPTEL",
+    date: "2026-05-17",
+    skills: "Python, Programming Fundamentals, Problem Solving, Algorithms",
+    description:
+      "Successfully completed the NPTEL course 'The Joy of Computing Using Python', gaining knowledge of Python programming, computational thinking, problem-solving techniques, and algorithmic concepts.",
+    imageUrl: "/certificates/NPTEL_Python_Certificate.png",
+  },
 ];
