@@ -180,7 +180,7 @@ export const certifications = [
       "Machine Learning, Data Analysis, Python, TensorFlow, Neural Networks",
     description:
       "Completed the Machine Learning Specialization on Coursera, covering key concepts and techniques in machine learning, including supervised and unsupervised learning, neural networks, and deep learning.",
-    imageUrl: "/Coursera MPVRJ891U1CM_page-0001.jpg",
+    imageUrl: "/certificates/Coursera_ML_Specialization_Certificate.jpg",
   },
   {
     title: "2nd Runner Up - ByteVerse 2025",
@@ -190,7 +190,7 @@ export const certifications = [
       "Teamwork, Problem Solving, Web Development, UI/UX Design, Project Management",
     description:
       "Achieved 2nd Runner Up position in ByteVerse 2025 Hackathon organized by HackSlash, showcasing skills in web development and teamwork.",
-    imageUrl: "/AdityaRanjan_byteverse.png",
+    imageUrl: "/certificates/Byterverse_2025_Certificate.png",
   },
   {
     title: "Certificate of Participation - Code The Uncoded 2024",
@@ -199,6 +199,15 @@ export const certifications = [
     skills: "Problem Solving, Coding, Algorithms",
     description:
       "Participated in CODE THE UNCODED 2024 organized by IEEE SB NITP, demonstrating strong problem-solving and coding skills.",
-    imageUrl: "/Participation Certificate-IEEE.png",
+    imageUrl: "/certificates/Participation Certificate-IEEE.png",
+  },
+  {
+    title: "NPTEL - The Joy of Computing Using Python",
+    organization: "NPTEL",
+    date: "2026-05-17",
+    skills: "Python, Programming Fundamentals, Problem Solving, Algorithms",
+    description:
+      "Successfully completed the NPTEL course 'The Joy of Computing Using Python', gaining knowledge of Python programming, computational thinking, problem-solving techniques, and algorithmic concepts.",
+    imageUrl: "/certificates/NPTEL_Python_Certificate.png",
   },
 ];
