@@ -125,6 +125,17 @@ export const PROJECTS_DATA: Project[] = [
     liveDemoUrl: "https://sharecircle-two.vercel.app/",
     tags: ["Next JS", "Firebase", "MongoDB", "Tailwind", "Vercel", "TypeScript", "Next Auth"],
   },
+  {
+    id: "project-5",
+    title: "Moniley",
+    description:
+      "Moniley is an AI-powered personal finance dashboard for tracking income, expenses, budgets, savings, and personalized insights via a Gemini advisor.",
+    imageUrl: "/moniley.png",
+    imageAiHint: "AI-powered personal finance dashboard",
+    githubUrl: "https://github.com/adityaranjan-091/Moniley",
+    liveDemoUrl: "https://moniley.vercel.app/",
+    tags: ["Next JS", "Firebase", "MongoDB", "Tailwind", "Vercel", "TypeScript", "Gemini API"],
+  },
 ];
 
 export interface EducationEntry {
