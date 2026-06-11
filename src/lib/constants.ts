@@ -14,6 +14,8 @@ import {
   SiPython,
   SiTailwindcss,
   SiTypescript,
+  SiFirebase,
+  SiPytorch,
 } from "react-icons/si";
 import { FaCopyright } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
@@ -56,12 +58,14 @@ export const SKILLS_DATA: Skill[] = [
   { name: "Next.js", icon: SiNextdotjs, category: "Frameworks & Libraries" },
   { name: "Node.js", icon: SiNodedotjs, category: "Frameworks & Libraries" },
   { name: "Express.js", icon: SiExpress, category: "Frameworks & Libraries" },
+  { name: "PyTorch", icon: SiPytorch, category: "Frameworks & Libraries" },
   {
     name: "Tailwind CSS",
     icon: SiTailwindcss,
     category: "Frameworks & Libraries",
   },
   { name: "MongoDB", icon: SiMongodb, category: "Databases" },
+  { name: "Firebase", icon: SiFirebase, category: "Tools" },
   { name: "GitHub", icon: SiGithub, category: "Tools" },
   { name: "Git", icon: FaGitAlt, category: "Tools" },
   { name: "VS Code", icon: VscVscode, category: "Tools" },
@@ -124,6 +128,17 @@ export const PROJECTS_DATA: Project[] = [
     githubUrl: "https://github.com/adityaranjan-091/sharecircle",
     liveDemoUrl: "https://sharecircle-two.vercel.app/",
     tags: ["Next JS", "Firebase", "MongoDB", "Tailwind", "Vercel", "TypeScript", "Next Auth"],
+  },
+  {
+    id: "project-5",
+    title: "Moniley",
+    description:
+      "Moniley is an AI-powered personal finance dashboard for tracking income, expenses, budgets, savings, and personalized insights via a Gemini advisor.",
+    imageUrl: "/moniley.png",
+    imageAiHint: "AI-powered personal finance dashboard",
+    githubUrl: "https://github.com/adityaranjan-091/Moniley",
+    liveDemoUrl: "https://moniley.vercel.app/",
+    tags: ["Next JS", "Firebase", "MongoDB", "Tailwind", "Vercel", "TypeScript", "Gemini API"],
   },
 ];
 
