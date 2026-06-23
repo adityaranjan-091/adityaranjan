@@ -76,7 +76,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             aria-label={`View ${title} source code on GitHub`}
           >
             <Github className="mr-2 h-4 w-4" aria-hidden="true" />
-            GitHub
+            Source
           </Link>
         </Button>
         {hasLiveDemo && (
@@ -88,7 +88,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               aria-label={`View ${title} live demo`}
             >
               <ExternalLink className="mr-2 h-4 w-4" aria-hidden="true" />
-              Live Demo
+              Live
             </Link>
           </Button>
         )}
