@@ -6,7 +6,7 @@ import { LuDownload, LuCircleUser } from "react-icons/lu";
 const AboutMeSection = () => {
   const profileInfo = {
     name: "Aditya Ranjan",
-    image: "/Profile-Pic.jpeg",
+    image: "/Profile-Pic.png",
     resumePath: "/resume.pdf",
     resumeFileName: "Aditya_Ranjan_Resume.pdf",
   };
@@ -29,13 +29,15 @@ const AboutMeSection = () => {
           <div className="md:flex">
             {/* Profile Image Section */}
             <div className="md:w-1/3 flex items-center justify-center p-8 bg-muted">
-              <div className="relative">
+              <div className="relative group">
+                {/* Decorative background glow */}
+                <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-primary to-primary/30 opacity-30 blur-md transition-all duration-500 group-hover:opacity-70 group-hover:blur-lg"></div>
                 <Image
                   src={profileInfo.image}
                   alt={`${profileInfo.name} - Profile Picture`}
                   width={300}
                   height={300}
-                  className="rounded-full shadow-lg object-cover aspect-square border-4 border-primary"
+                  className="relative rounded-full shadow-xl object-cover object-top aspect-square border-4 border-background z-10 transition-transform duration-500 group-hover:-translate-y-1"
                   data-ai-hint="professional portrait"
                   priority
                   sizes="(max-width: 768px) 300px, 300px"
